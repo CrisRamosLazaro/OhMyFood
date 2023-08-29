@@ -1,0 +1,60 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+@import '../components/buttons';
+@import '../components/cards';
+
+.location {
+    @include flex-box;
+    background-color: $dark-background;
+
+    &__icon {
+        padding: 4% 2%;
+    }
+
+    &__text {
+        padding: 4% 2%;
+    }
+}
+
+.explore {
+    @include flex-box ($direction: column);
+    padding: 0.5em 1em;
+    background-color: $light-background;
+
+    p {
+        padding: 0 10%;
+        text-align: center;
+    }
+
+    &__button {
+        @extend .page-button;
+    }
+}
+
+.instructions {
+    @include flex-box ($direction: column);
+    padding: 0.5em 1em;
+
+    &__title {
+        @include left-title;
+    }
+
+    &__button {
+        @extend .steps-button;
+
+    }
+}
+
+.restaurants {
+    @include flex-box($direction: column);
+    padding: 0.5em 1em;
+    background-color: $light-background;
+
+    &__title {
+        @include left-title;
+    }
+
+    &__card {
+        @extend .resto-card;
+    }
+}

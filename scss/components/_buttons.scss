@@ -1,0 +1,64 @@
+@import '../utils/variables';
+@import '../utils/functions';
+
+.page-button {
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background: linear-gradient(to bottom, $secondary-color, $primary-color);
+    font-weight: bold;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.steps-button {
+    @include flex-box($justify-content: left);
+    width: $width;
+    margin: 0.5em 0;
+    padding: 5% 0;
+    background-color: $light-background;
+    font-weight: bold;
+    border: 1px solid $light-background;
+    border-radius: 15px;
+    box-shadow: $shadow;
+
+    &__number {
+        margin-left: -10px;
+        margin-right: 20px;
+        background-color: $primary-color;
+        color: #fff;
+        font-size: 0.75em;
+        padding: 0.15em;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        border-radius: 20px;
+    }
+
+    &__icon {
+        color: #707070;
+        margin-right: 20px;
+        width: 15px;
+        height: 15px;
+
+        &:active {
+            color: $primary-color
+        }
+    }
+
+    &:active {
+        background-color: $primary-color
+    }
+}
+
+.new-button {
+    background-color: $tertiary-color;
+    color: green;
+    // color: $darken-color($tertiary-color , 15%);
+    border-radius: 5%;
+    padding: 0.5em 1.75em;
+    font-size: 0.8em;
+    font-weight: bold;
+}

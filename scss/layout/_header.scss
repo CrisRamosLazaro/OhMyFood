@@ -1,0 +1,27 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.header {
+    &__logo {
+        @include flex-box;
+        position: relative;
+        padding: 3%;
+        box-shadow: $shadow;
+
+        &::before {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: $shadow;
+        }
+    }
+
+    h1 {
+        font-family: 'Shrikhand';
+        font-size: 180%;
+        letter-spacing: 0.05em;
+        margin: 0;
+    }
+}
