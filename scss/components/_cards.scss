@@ -34,7 +34,7 @@
         &__text {
             &__resto-name {
                 margin: 1em 0 0.25em 0;
-                font-weight: bold;
+                font-weight: 900;
             }
 
             &__resto-place {
@@ -43,16 +43,7 @@
         }
 
         &__icon-box {
-            color: #707070;
-            font-size: 1.25em;
-            transform: scaleY(1.25);
-
-            &__icon {
-                &:active {
-                    color: pink;
-                }
-            }
-
+            @extend .heart-checkbox;
 
         }
     }
@@ -64,4 +55,38 @@
         right: 15px;
 
     }
+}
+
+.menu-card {
+    width: 100%;
+    @include flex-box($direction: column, $align-items: flex-start);
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: $rounded-border;
+    box-shadow: $shadow;
+    border: none;
+    background-color: white;
+
+    &__name {
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 0.5em;
+    }
+
+    &__data {
+        width: 100%;
+        @include flex-box($justify-content: space-between);
+
+        &__description {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        &__price {
+            margin: 0;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+    }
+
 }

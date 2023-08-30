@@ -1,0 +1,71 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+@import '../components/cards';
+@import '../components/buttons';
+
+.restaurant-banner {
+    @include restaurant-image(url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg));
+    position: relative;
+    z-index: 1;
+}
+
+.restaurant-menu {
+    background-color: lighten-color($grey-background, 52.5%);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-top: -35px;
+    position: relative;
+    z-index: 2;
+
+
+    &__heading {
+        @include flex-box($justify-content: space-between);
+        padding: 0 5%;
+
+        &__name {
+            font-family: $title;
+        }
+
+        &__icon {
+            @extend .heart-checkbox;
+        }
+    }
+
+    &__dishes {
+        padding: 0 5% 2.5%;
+
+        &__title {
+            font-weight: 500;
+            position: relative;
+            display: inline-block;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 60%;
+                height: 3px;
+                background-color: $tertiary-color;
+                transform: translateY(10px);
+                border-radius: $rounded-border;
+            }
+        }
+
+        &__item {
+            @extend .menu-card
+        }
+
+    }
+
+    &__button-box {
+        @include flex-box;
+
+        &__button {
+            @extend .page-button;
+            width: 50%;
+        }
+
+
+    }
+}

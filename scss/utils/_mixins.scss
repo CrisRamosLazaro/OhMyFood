@@ -1,9 +1,9 @@
 @import './variables';
 
-@mixin flex-box($direction: row, $justify-content: center) {
+@mixin flex-box($direction: row, $justify-content: center, $align-items: center) {
     display: flex;
     justify-content: $justify-content;
-    align-items: center;
+    align-items: $align-items;
     flex-direction: $direction;
 }
 
@@ -11,4 +11,12 @@
     @include flex-box($justify-content: flex-start);
     width: $width;
     margin-left: -18px;
+}
+
+@mixin restaurant-image($bg-image) {
+    height: 250px;
+    background-image: $bg-image;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }

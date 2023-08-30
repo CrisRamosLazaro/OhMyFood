@@ -1,11 +1,11 @@
-@import '../utils/mixins';
 @import '../utils/variables';
+@import '../utils/mixins';
 @import '../components/buttons';
 @import '../components/cards';
 
 .location {
     @include flex-box;
-    background-color: $dark-background;
+    background-color: lighten-color($grey-background, 48%);
 
     &__icon {
         padding: 4% 2%;
@@ -13,13 +13,14 @@
 
     &__text {
         padding: 4% 2%;
+        font-weight: bold;
     }
 }
 
 .explore {
     @include flex-box ($direction: column);
     padding: 0.5em 1em;
-    background-color: $light-background;
+    background-color: lighten-color($grey-background, 52.5%);
 
     p {
         padding: 0 10%;
@@ -48,7 +49,7 @@
 .restaurants {
     @include flex-box($direction: column);
     padding: 0.5em 1em;
-    background-color: $light-background;
+    background-color: lighten-color($grey-background, 52.5%);
 
     &__title {
         @include left-title;

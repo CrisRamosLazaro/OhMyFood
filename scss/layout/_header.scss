@@ -19,9 +19,11 @@
     }
 
     h1 {
-        font-family: 'Shrikhand';
+        font-family: $title;
         font-size: 180%;
         letter-spacing: 0.05em;
         margin: 0;
     }
+
+
 }

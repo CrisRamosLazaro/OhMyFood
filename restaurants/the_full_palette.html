@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="./css/normalize.css" type="text/css" rel="stylesheet">
-    <link href="./css/styles.css" type="text/css" rel="stylesheet">
+    <link href="../css/normalize.css" type="text/css" rel="stylesheet">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fab95b7b01.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <title>OhMyFood</title>
@@ -18,15 +18,135 @@
 
 <body>
     <header>
-        <div class="logo"><img src="./images/logo/ohmyfood.png" class="logo-img" alt="OhMyFood"></div>
+        <span><i class="fa-solid fa-arrow-left"></i></span>
+        <div class="header">
+            <h1 class="header__logo">ohmyfood</h1>
+        </div>
     </header>
 
     <main>
-        <h1>TESTINGGGG</h1>
+        <section class="restaurant-banner">
+        </section>
+
+        <section class="restaurant-menu">
+            <div class="restaurant-menu__heading">
+                <h2 class="restaurant-menu__heading__name">The Full Palette</h2>
+                <div class="restaurant-menu__heading__icon"><i class="fa-regular fa-heart"></i></div>
+            </div>
+
+            <article class="restaurant-menu__dishes">
+                <h4 class="restaurant-menu__dishes__title">ENTREES</h4>
+
+                <button class="restaurant-menu__dishes__item">
+                    <h3 class="menu-card__name">Escargot</h3>
+                    <div class="menu-card__data">
+                        <p class="menu-card__data__description">With southern French spices</p>
+                        <p class="menu-card__data__price">25€</p>
+                    </div>
+                </button>
+
+                <button class="restaurant-menu__dishes__item">
+                    <h3 class="menu-card__name">Duck Foie Gras</h3>
+                    <div class="menu-card__data">
+                        <p class="menu-card__data__description">With black truffle shavings</p>
+                        <p class="menu-card__data__price">35€</p>
+                    </div>
+                </button>
+
+                <button class="restaurant-menu__dishes__item">
+                    <h3 class="menu-card__name">Fried egg</h3>
+                    <div class="menu-card__data">
+                        <p class="menu-card__data__description">Seasoned with truffle cream and...</p>
+                        <p class="menu-card__data__price">20€</p>
+                    </div>
+                </button>
+
+            </article>
+
+            <article class="restaurant-menu__dishes">
+                <h4 class="restaurant-menu__dishes__title">MAIN DISH</h4>
+
+                <button class="restaurant-menu__dishes__item">
+                    <h3 class="menu-card__name">Herb-Encrusted Steak</h3>
+                    <div class="menu-card__data">
+                        <p class="menu-card__data__description">With delicately sliced and seasoned veg...</p>
+                        <p class="menu-card__data__price">40€</p>
+                    </div>
+                </button>
+
+                <button class="restaurant-menu__dishes__item">
+                    <h3 class="menu-card__name">Ox Tail Shepard's Pie</h3>
+                    <div class="menu-card__data">
+                        <p class="menu-card__data__description">With black truffle and pureed parsnips</p>
+                        <p class="menu-card__data__price">35€</p>
+                    </div>
+                </button>
+
+                <button class="restaurant-menu__dishes__item">
+                    <h3 class="menu-card__name">Filet of Sole</h3>
+                    <div class="menu-card__data">
+                        <p class="menu-card__data__description">With citrus dressing</p>
+                        <p class="menu-card__data__price">44€</p>
+                    </div>
+                </button>
+
+            </article>
+
+            <article class="restaurant-menu__dishes">
+                <h4 class="restaurant-menu__dishes__title">DESSERTS</h4>
+
+                <button class="restaurant-menu__dishes__item">
+                    <h3 class="menu-card__name">Paris-Brest</h3>
+                    <div class="menu-card__data">
+                        <p class="menu-card__data__description">Revisited</p>
+                        <p class="menu-card__data__price">18€</p>
+                    </div>
+                </button>
+
+                <button class="restaurant-menu__dishes__item">
+                    <h3 class="menu-card__name">Chocolate Macaroons</h3>
+                    <div class="menu-card__data">
+                        <p class="menu-card__data__description">With vanilla ice cream</p>
+                        <p class="menu-card__data__price">22€</p>
+                    </div>
+                </button>
+
+                <button class="restaurant-menu__dishes__item">
+                    <h3 class="menu-card__name">Chocolate Mousse</h3>
+                    <div class="menu-card__data">
+                        <p class="menu-card__data__description">With spices and black truffle</p>
+                        <p class="menu-card__data__price">23€</p>
+                    </div>
+                </button>
+
+            </article>
+            <div class="restaurant-menu__button-box">
+                <button class="restaurant-menu__button-box__button">
+                    Order
+                </button>
+            </div>
+
+        </section>
     </main>
 
-    <footer>
-
+    <footer class="footer">
+        <p class="footer__logo">ohmyfood</p>
+        <ul class="footer__menu">
+            <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">
+                    <span class="footer__menu__icon" id="cuttlety"><i class="fa-solid fa-utensils"></i></span>
+                    <span>Suggest a restaurant</span>
+                </a>
+            </li>
+            <li class="footer__menu__item">
+                <a class="footer__menu__link" href="#">
+                    <span class="footer__menu__icon"><i class="fa-solid fa-handshake-angle"></i></span>
+                    <span>Become a partner</span>
+                </a>
+            </li>
+            <li class="footer__menu__item"><a class="footer__menu__link" href="#">Legal</a></li>
+            <li class="footer__menu__item"><a class="footer__menu__link" href="#">Contact</a></li>
+        </ul>
     </footer>
 
 </body>

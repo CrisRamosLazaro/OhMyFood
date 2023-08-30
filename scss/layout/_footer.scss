@@ -1,0 +1,48 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.footer {
+    background-color: darken($grey-background, 20%);
+    padding: 5% 7.5%;
+
+    &__logo {
+        color: white;
+        font-family: 'Shrikhand';
+        font-size: 1.15em;
+        letter-spacing: 0.05em;
+        margin: 0;
+        padding-bottom: 1em;
+    }
+
+    &__menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            margin-bottom: 0.5em;
+        }
+
+        &__link {
+            color: white;
+            text-decoration: none;
+            font-family: 'Roboto';
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+
+        &__icon {
+            margin-right: 0.75em;
+            display: inline-block;
+            width: 10px;
+
+            i {
+                font-size: 0.85em;
+            }
+        }
+    }
+
+
+}
