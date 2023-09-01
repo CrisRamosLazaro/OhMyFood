@@ -182,7 +182,6 @@ body {
 }
 
 .menu-card, .restaurant-menu__dishes__item {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -214,6 +213,42 @@ body {
   margin: 0;
   font-size: 0.9em;
   font-weight: bold;
+}
+.menu-card__green-tick {
+  position: absolute;
+  right: 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transform: translateX(75px);
+  transition: transform 750ms;
+}
+.menu-card__green-tick__circle {
+  background-color: white;
+  padding: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 25px;
+  color: #99E2D0;
+}
+.menu-card__green-tick__circle__tick {
+  transition: transform 500ms;
+}
+.menu-card:active .menu-card__green-tick, .restaurant-menu__dishes__item:active .menu-card__green-tick {
+  transform: translateX(0);
+  transform-origin: left center;
+}
+.menu-card:active .menu-card__circle__tick, .restaurant-menu__dishes__item:active .menu-card__circle__tick {
+  transform: translateX(-100%) rotate(720deg);
+  transform-origin: center;
+}
+.menu-card:active .menu-card__data__price, .restaurant-menu__dishes__item:active .menu-card__data__price {
+  transform: translateX(-75px);
+  transition: transform 1s;
 }
 
 .page-button, .restaurant-menu__button-box__button, .explore__button {
@@ -393,7 +428,6 @@ body {
 }
 
 .menu-card, .restaurant-menu__dishes__item {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -425,6 +459,42 @@ body {
   margin: 0;
   font-size: 0.9em;
   font-weight: bold;
+}
+.menu-card__green-tick {
+  position: absolute;
+  right: 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transform: translateX(75px);
+  transition: transform 750ms;
+}
+.menu-card__green-tick__circle {
+  background-color: white;
+  padding: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 25px;
+  color: #99E2D0;
+}
+.menu-card__green-tick__circle__tick {
+  transition: transform 500ms;
+}
+.menu-card:active .menu-card__green-tick, .restaurant-menu__dishes__item:active .menu-card__green-tick {
+  transform: translateX(0);
+  transform-origin: left center;
+}
+.menu-card:active .menu-card__circle__tick, .restaurant-menu__dishes__item:active .menu-card__circle__tick {
+  transform: translateX(-100%) rotate(720deg);
+  transform-origin: center;
+}
+.menu-card:active .menu-card__data__price, .restaurant-menu__dishes__item:active .menu-card__data__price {
+  transform: translateX(-75px);
+  transition: transform 1s;
 }
 
 .location {
@@ -485,7 +555,7 @@ body {
   width: 85%;
   margin-left: -18px;
 }
-.header__logo {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -494,19 +564,25 @@ body {
   padding: 3%;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
-.header__logo::before {
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background-color: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-.header h1 {
+.header__logo {
   font-family: "Shrikhand";
   font-size: 180%;
   letter-spacing: 0.05em;
   margin: 0;
+}
+.header__arrow {
+  position: absolute;
+  left: 15px;
+}
+.header__arrow__link {
+  text-decoration: none;
+  color: inherit;
+}
+.header__arrow__link:active {
+  color: inherit;
+}
+.header__arrow__link:hover, .header__arrow__link:focus {
+  color: #99E2D0;
 }
 
 .footer {
@@ -658,7 +734,6 @@ body {
 }
 
 .menu-card, .restaurant-menu__dishes__item {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -690,6 +765,42 @@ body {
   margin: 0;
   font-size: 0.9em;
   font-weight: bold;
+}
+.menu-card__green-tick {
+  position: absolute;
+  right: 0;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transform: translateX(75px);
+  transition: transform 750ms;
+}
+.menu-card__green-tick__circle {
+  background-color: white;
+  padding: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 25px;
+  color: #99E2D0;
+}
+.menu-card__green-tick__circle__tick {
+  transition: transform 500ms;
+}
+.menu-card:active .menu-card__green-tick, .restaurant-menu__dishes__item:active .menu-card__green-tick {
+  transform: translateX(0);
+  transform-origin: left center;
+}
+.menu-card:active .menu-card__circle__tick, .restaurant-menu__dishes__item:active .menu-card__circle__tick {
+  transform: translateX(-100%) rotate(720deg);
+  transform-origin: center;
+}
+.menu-card:active .menu-card__data__price, .restaurant-menu__dishes__item:active .menu-card__data__price {
+  transform: translateX(-75px);
+  transition: transform 1s;
 }
 
 .page-button, .restaurant-menu__button-box__button, .explore__button {
@@ -758,13 +869,15 @@ body {
 }
 
 .restaurant-banner {
+  position: relative;
+  z-index: 1;
+}
+.restaurant-banner--full-palette {
   height: 250px;
   background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  position: relative;
-  z-index: 1;
 }
 
 .restaurant-menu {
@@ -803,6 +916,30 @@ body {
   background-color: #99E2D0;
   transform: translateY(10px);
   border-radius: 15px;
+}
+.restaurant-menu__dishes__item {
+  animation: moveUpFadeIn 1000ms ease-out;
+  position: relative;
+  overflow: hidden;
+}
+.restaurant-menu__dishes__item:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.restaurant-menu__dishes__item:nth-of-type(2) {
+  animation-delay: 150ms;
+}
+.restaurant-menu__dishes__item:nth-of-type(3) {
+  animation-delay: 250ms;
+}
+@keyframes moveUpFadeIn {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .restaurant-menu__button-box {
   display: flex;
