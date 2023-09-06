@@ -15,6 +15,10 @@ body {
   margin: 1em;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
+.page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+  background: linear-gradient(to bottom, #ff9fe5, #a776e3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
 
 .steps-button, .instructions__button {
   display: flex;
@@ -48,11 +52,16 @@ body {
   width: 15px;
   height: 15px;
 }
-.steps-button__icon:active {
+.steps-button:hover, .instructions__button:hover {
+  background-color: #9356DC;
+  color: #fff;
+}
+.steps-button:hover .steps-button__number, .instructions__button:hover .steps-button__number {
+  background-color: #fff;
   color: #9356DC;
 }
-.steps-button:active, .instructions__button:active {
-  background-color: #9356DC;
+.steps-button:hover .steps-button__icon, .instructions__button:hover .steps-button__icon {
+  color: #fff;
 }
 
 .new-button, .resto-card__button {
@@ -64,10 +73,40 @@ body {
   font-weight: bold;
 }
 
-.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__icon-box {
-  color: #707070;
+.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__favorite-box {
   font-size: 1.25em;
   transform: scaleY(1.25);
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+.heart-checkbox__icon {
+  color: #707070;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.heart-checkbox__icon:hover {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.heart-checkbox__icon-filled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 
 .page-button, .restaurant-menu__button-box__button, .explore__button {
@@ -80,6 +119,10 @@ body {
   margin: 1em;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
+.page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+  background: linear-gradient(to bottom, #ff9fe5, #a776e3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
 
 .steps-button, .instructions__button {
   display: flex;
@@ -113,11 +156,16 @@ body {
   width: 15px;
   height: 15px;
 }
-.steps-button__icon:active {
+.steps-button:hover, .instructions__button:hover {
+  background-color: #9356DC;
+  color: #fff;
+}
+.steps-button:hover .steps-button__number, .instructions__button:hover .steps-button__number {
+  background-color: #fff;
   color: #9356DC;
 }
-.steps-button:active, .instructions__button:active {
-  background-color: #9356DC;
+.steps-button:hover .steps-button__icon, .instructions__button:hover .steps-button__icon {
+  color: #fff;
 }
 
 .new-button, .resto-card__button {
@@ -129,10 +177,40 @@ body {
   font-weight: bold;
 }
 
-.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__icon-box {
-  color: #707070;
+.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__favorite-box {
   font-size: 1.25em;
   transform: scaleY(1.25);
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+.heart-checkbox__icon {
+  color: #707070;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.heart-checkbox__icon:hover {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.heart-checkbox__icon-filled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 
 .resto-card, .restaurants__card {
@@ -213,6 +291,8 @@ body {
   margin: 0;
   font-size: 0.9em;
   font-weight: bold;
+  transform: translateX(0);
+  transition: transform 750ms;
 }
 .menu-card__green-tick {
   position: absolute;
@@ -226,6 +306,7 @@ body {
   flex-direction: row;
   transform: translateX(75px);
   transition: transform 750ms;
+  transform-origin: left center;
 }
 .menu-card__green-tick__circle {
   background-color: white;
@@ -236,19 +317,18 @@ body {
   color: #99E2D0;
 }
 .menu-card__green-tick__circle__tick {
-  transition: transform 500ms;
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 500ms ease-out 150ms;
 }
 .menu-card:active .menu-card__green-tick, .restaurant-menu__dishes__item:active .menu-card__green-tick {
   transform: translateX(0);
-  transform-origin: left center;
 }
-.menu-card:active .menu-card__circle__tick, .restaurant-menu__dishes__item:active .menu-card__circle__tick {
-  transform: translateX(-100%) rotate(720deg);
-  transform-origin: center;
+.menu-card:active .menu-card__green-tick__circle__tick, .restaurant-menu__dishes__item:active .menu-card__green-tick__circle__tick {
+  transform: rotate(360deg);
 }
 .menu-card:active .menu-card__data__price, .restaurant-menu__dishes__item:active .menu-card__data__price {
   transform: translateX(-75px);
-  transition: transform 1s;
 }
 
 .page-button, .restaurant-menu__button-box__button, .explore__button {
@@ -260,6 +340,10 @@ body {
   padding: 1em;
   margin: 1em;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+  background: linear-gradient(to bottom, #ff9fe5, #a776e3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .steps-button, .instructions__button {
@@ -294,11 +378,16 @@ body {
   width: 15px;
   height: 15px;
 }
-.steps-button__icon:active {
+.steps-button:hover, .instructions__button:hover {
+  background-color: #9356DC;
+  color: #fff;
+}
+.steps-button:hover .steps-button__number, .instructions__button:hover .steps-button__number {
+  background-color: #fff;
   color: #9356DC;
 }
-.steps-button:active, .instructions__button:active {
-  background-color: #9356DC;
+.steps-button:hover .steps-button__icon, .instructions__button:hover .steps-button__icon {
+  color: #fff;
 }
 
 .new-button, .resto-card__button {
@@ -310,10 +399,40 @@ body {
   font-weight: bold;
 }
 
-.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__icon-box {
-  color: #707070;
+.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__favorite-box {
   font-size: 1.25em;
   transform: scaleY(1.25);
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+.heart-checkbox__icon {
+  color: #707070;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.heart-checkbox__icon:hover {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.heart-checkbox__icon-filled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 
 .page-button, .restaurant-menu__button-box__button, .explore__button {
@@ -325,6 +444,10 @@ body {
   padding: 1em;
   margin: 1em;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+  background: linear-gradient(to bottom, #ff9fe5, #a776e3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .steps-button, .instructions__button {
@@ -359,11 +482,16 @@ body {
   width: 15px;
   height: 15px;
 }
-.steps-button__icon:active {
+.steps-button:hover, .instructions__button:hover {
+  background-color: #9356DC;
+  color: #fff;
+}
+.steps-button:hover .steps-button__number, .instructions__button:hover .steps-button__number {
+  background-color: #fff;
   color: #9356DC;
 }
-.steps-button:active, .instructions__button:active {
-  background-color: #9356DC;
+.steps-button:hover .steps-button__icon, .instructions__button:hover .steps-button__icon {
+  color: #fff;
 }
 
 .new-button, .resto-card__button {
@@ -375,10 +503,40 @@ body {
   font-weight: bold;
 }
 
-.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__icon-box {
-  color: #707070;
+.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__favorite-box {
   font-size: 1.25em;
   transform: scaleY(1.25);
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+.heart-checkbox__icon {
+  color: #707070;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.heart-checkbox__icon:hover {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.heart-checkbox__icon-filled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 
 .resto-card, .restaurants__card {
@@ -459,6 +617,8 @@ body {
   margin: 0;
   font-size: 0.9em;
   font-weight: bold;
+  transform: translateX(0);
+  transition: transform 750ms;
 }
 .menu-card__green-tick {
   position: absolute;
@@ -472,6 +632,7 @@ body {
   flex-direction: row;
   transform: translateX(75px);
   transition: transform 750ms;
+  transform-origin: left center;
 }
 .menu-card__green-tick__circle {
   background-color: white;
@@ -482,19 +643,18 @@ body {
   color: #99E2D0;
 }
 .menu-card__green-tick__circle__tick {
-  transition: transform 500ms;
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 500ms ease-out 150ms;
 }
 .menu-card:active .menu-card__green-tick, .restaurant-menu__dishes__item:active .menu-card__green-tick {
   transform: translateX(0);
-  transform-origin: left center;
 }
-.menu-card:active .menu-card__circle__tick, .restaurant-menu__dishes__item:active .menu-card__circle__tick {
-  transform: translateX(-100%) rotate(720deg);
-  transform-origin: center;
+.menu-card:active .menu-card__green-tick__circle__tick, .restaurant-menu__dishes__item:active .menu-card__green-tick__circle__tick {
+  transform: rotate(360deg);
 }
 .menu-card:active .menu-card__data__price, .restaurant-menu__dishes__item:active .menu-card__data__price {
   transform: translateX(-75px);
-  transition: transform 1s;
 }
 
 .location {
@@ -577,6 +737,7 @@ body {
 .header__arrow__link {
   text-decoration: none;
   color: inherit;
+  cursor: default;
 }
 .header__arrow__link:active {
   color: inherit;
@@ -632,6 +793,10 @@ body {
   margin: 1em;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
+.page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+  background: linear-gradient(to bottom, #ff9fe5, #a776e3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
 
 .steps-button, .instructions__button {
   display: flex;
@@ -665,11 +830,16 @@ body {
   width: 15px;
   height: 15px;
 }
-.steps-button__icon:active {
+.steps-button:hover, .instructions__button:hover {
+  background-color: #9356DC;
+  color: #fff;
+}
+.steps-button:hover .steps-button__number, .instructions__button:hover .steps-button__number {
+  background-color: #fff;
   color: #9356DC;
 }
-.steps-button:active, .instructions__button:active {
-  background-color: #9356DC;
+.steps-button:hover .steps-button__icon, .instructions__button:hover .steps-button__icon {
+  color: #fff;
 }
 
 .new-button, .resto-card__button {
@@ -681,10 +851,40 @@ body {
   font-weight: bold;
 }
 
-.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__icon-box {
-  color: #707070;
+.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__favorite-box {
   font-size: 1.25em;
   transform: scaleY(1.25);
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+.heart-checkbox__icon {
+  color: #707070;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.heart-checkbox__icon:hover {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.heart-checkbox__icon-filled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 
 .resto-card, .restaurants__card {
@@ -765,6 +965,8 @@ body {
   margin: 0;
   font-size: 0.9em;
   font-weight: bold;
+  transform: translateX(0);
+  transition: transform 750ms;
 }
 .menu-card__green-tick {
   position: absolute;
@@ -778,6 +980,7 @@ body {
   flex-direction: row;
   transform: translateX(75px);
   transition: transform 750ms;
+  transform-origin: left center;
 }
 .menu-card__green-tick__circle {
   background-color: white;
@@ -788,19 +991,18 @@ body {
   color: #99E2D0;
 }
 .menu-card__green-tick__circle__tick {
-  transition: transform 500ms;
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 500ms ease-out 150ms;
 }
 .menu-card:active .menu-card__green-tick, .restaurant-menu__dishes__item:active .menu-card__green-tick {
   transform: translateX(0);
-  transform-origin: left center;
 }
-.menu-card:active .menu-card__circle__tick, .restaurant-menu__dishes__item:active .menu-card__circle__tick {
-  transform: translateX(-100%) rotate(720deg);
-  transform-origin: center;
+.menu-card:active .menu-card__green-tick__circle__tick, .restaurant-menu__dishes__item:active .menu-card__green-tick__circle__tick {
+  transform: rotate(360deg);
 }
 .menu-card:active .menu-card__data__price, .restaurant-menu__dishes__item:active .menu-card__data__price {
   transform: translateX(-75px);
-  transition: transform 1s;
 }
 
 .page-button, .restaurant-menu__button-box__button, .explore__button {
@@ -812,6 +1014,10 @@ body {
   padding: 1em;
   margin: 1em;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+  background: linear-gradient(to bottom, #ff9fe5, #a776e3);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .steps-button, .instructions__button {
@@ -846,11 +1052,16 @@ body {
   width: 15px;
   height: 15px;
 }
-.steps-button__icon:active {
+.steps-button:hover, .instructions__button:hover {
+  background-color: #9356DC;
+  color: #fff;
+}
+.steps-button:hover .steps-button__number, .instructions__button:hover .steps-button__number {
+  background-color: #fff;
   color: #9356DC;
 }
-.steps-button:active, .instructions__button:active {
-  background-color: #9356DC;
+.steps-button:hover .steps-button__icon, .instructions__button:hover .steps-button__icon {
+  color: #fff;
 }
 
 .new-button, .resto-card__button {
@@ -862,10 +1073,40 @@ body {
   font-weight: bold;
 }
 
-.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__icon-box {
-  color: #707070;
+.heart-checkbox, .restaurant-menu__heading__icon, .resto-card__info__favorite-box {
   font-size: 1.25em;
   transform: scaleY(1.25);
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+.heart-checkbox__icon {
+  color: #707070;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+.heart-checkbox__icon:hover {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.heart-checkbox__icon-filled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
 }
 
 .restaurant-banner {
@@ -875,6 +1116,27 @@ body {
 .restaurant-banner--full-palette {
   height: 250px;
   background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.restaurant-banner--enchanted-plate {
+  height: 250px;
+  background-image: url(../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.restaurant-banner--le-gourmand {
+  height: 250px;
+  background-image: url(../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.restaurant-banner--bastille {
+  height: 250px;
+  background-image: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

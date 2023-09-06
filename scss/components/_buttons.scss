@@ -1,15 +1,20 @@
 @import '../utils/variables';
 @import '../utils/functions';
+@import '../utils/mixins';
 
 .page-button {
     border-radius: 50px;
     border: none;
     color: white;
-    background: linear-gradient(to bottom, $secondary-color, $primary-color);
+    background: $button-grading;
     font-weight: 700;
     padding: 1em;
     margin: 1em;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        @include hovered-button;
+    }
 
 }
 
@@ -42,15 +47,23 @@
         margin-right: 20px;
         width: 15px;
         height: 15px;
+    }
 
-        &:active {
-            color: $primary-color
+    &:hover {
+        background-color: $primary-color;
+        color: #fff;
+
+        .steps-button__number {
+            background-color: #fff;
+            color: $primary-color;
+
+        }
+
+        .steps-button__icon {
+            color: #fff;
         }
     }
 
-    &:active {
-        background-color: $primary-color
-    }
 }
 
 .new-button {
@@ -63,67 +76,43 @@
 }
 
 .heart-checkbox {
-    color: $grey-background;
     font-size: 1.25em;
     transform: scaleY(1.25);
+    cursor: pointer;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 0.25em;
 
-    // &__input {
-    //     display: none;
-    // }
+    &__icon {
+        color: $grey-background;
+        position: relative;
+        z-index: 1;
+        opacity: 1;
 
-    // &__label {
-    //     cursor: pointer;
+        &:hover {
+            opacity: 0;
+            transition: opacity 500ms;
 
-    //     &+.heart-checkbox__label {
-    //         cursor: pointer;
-    //         display: inline-block;
-    //         width: 1em;
-    //         height: 1em;
-    //         vertical-align: middle;
-    //         position: relative;
-    //         margin-right: 0.25em;
+            &+.heart-checkbox__icon-filled {
+                opacity: 1;
+                transition: opacity 500ms ease-in-out;
 
-    //         &::before {
-    //             content: "";
-    //             position: absolute;
-    //             top: 0;
-    //             left: 0;
-    //             right: 0;
-    //             bottom: 0;
-    //             display: block;
-    //             transform: scale(0.9);
-    //             border-radius: 50%;
-    //             background-color: transparent;
-    //             transition: background-color 0.2s;
-    //         }
+            }
+        }
+    }
 
-    //         &::after {
-    //             content: "";
-    //             position: absolute;
-    //             top: 0;
-    //             left: 0;
-    //             right: 0;
-    //             bottom: 0;
-    //             display: block;
-    //             transform: scale(0.8);
-    //             border-radius: 50%;
-    //             color: transparent;
-    //         }
+    &__icon-filled {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background: $button-grading;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+    }
 
-    //         &:hover::before,
-    //         &:hover::after {
-    //             background-color: rgba(0, 0, 0, 0.1);
-    //         }
-
-    //         &__input:checked+& {
-    //             &::before {
-    //                 background-color: transparent;
-    //             }
-
-    //             &::after {
-    //                 color: pink;
-    //             }
-    //         }
-    //     }
-    // }
 }

@@ -42,7 +42,7 @@
             }
         }
 
-        &__icon-box {
+        &__favorite-box {
             @extend .heart-checkbox;
 
         }
@@ -85,6 +85,8 @@
             margin: 0;
             font-size: 0.9em;
             font-weight: bold;
+            transform: translateX(0);
+            transition: transform 750ms;
         }
     }
 
@@ -97,7 +99,7 @@
         @include flex-box;
         transform: translateX(75px);
         transition: transform 750ms;
-        // animation: crawlLeft 1000ms ease-out;
+        transform-origin: left center;
 
         &__circle {
             background-color: white;
@@ -108,41 +110,25 @@
             color: $tertiary-color;
 
             &__tick {
-
-                transition: transform 500ms;
+                display: inline-block;
+                transform: rotate(0deg);
+                transition: transform 500ms ease-out 150ms;
             }
         }
     }
 
-    //  @keyframes crawlLeft {
-    //      0% {
-    //          transform: translateX(15px);
-    //          opacity: 0;
-    //      }
-
-    //      80% {
-    //          transform: translateY(0);
-    //          opacity: 1;
-    //      }
-    //  }
-
     &:active &__green-tick {
         transform: translateX(0);
-        transform-origin: left center;
-    }
 
-    &:active &__circle {
-
-        &__tick {
-            transform: translateX(-100%) rotate(720deg);
-            transform-origin: center;
+        &__circle {
+            &__tick {
+                transform: rotate(360deg);
+            }
         }
-
     }
 
     &:active &__data__price {
         transform: translateX(-75px);
-        transition: transform 1s;
     }
 
 }

@@ -3,6 +3,8 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $grey-background: #707070;
 
+$button-grading: linear-gradient(to bottom, $secondary-color, $primary-color);
+
 $shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 
 $width: 85%;
