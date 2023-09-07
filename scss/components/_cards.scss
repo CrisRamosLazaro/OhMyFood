@@ -117,6 +117,10 @@
         }
     }
 
+    &:hover {
+        cursor: pointer;
+    }
+
     &:active &__green-tick {
         transform: translateX(0);
 

@@ -90,11 +90,11 @@ body {
 }
 .heart-checkbox__icon:hover {
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
 }
 .heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
   opacity: 1;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 .heart-checkbox__icon-filled {
   position: absolute;
@@ -194,11 +194,11 @@ body {
 }
 .heart-checkbox__icon:hover {
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
 }
 .heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
   opacity: 1;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 .heart-checkbox__icon-filled {
   position: absolute;
@@ -320,6 +320,9 @@ body {
   display: inline-block;
   transform: rotate(0deg);
   transition: transform 500ms ease-out 150ms;
+}
+.menu-card:hover, .restaurant-menu__dishes__item:hover {
+  cursor: pointer;
 }
 .menu-card:active .menu-card__green-tick, .restaurant-menu__dishes__item:active .menu-card__green-tick {
   transform: translateX(0);
@@ -416,11 +419,11 @@ body {
 }
 .heart-checkbox__icon:hover {
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
 }
 .heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
   opacity: 1;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 .heart-checkbox__icon-filled {
   position: absolute;
@@ -520,11 +523,11 @@ body {
 }
 .heart-checkbox__icon:hover {
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
 }
 .heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
   opacity: 1;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 .heart-checkbox__icon-filled {
   position: absolute;
@@ -646,6 +649,9 @@ body {
   display: inline-block;
   transform: rotate(0deg);
   transition: transform 500ms ease-out 150ms;
+}
+.menu-card:hover, .restaurant-menu__dishes__item:hover {
+  cursor: pointer;
 }
 .menu-card:active .menu-card__green-tick, .restaurant-menu__dishes__item:active .menu-card__green-tick {
   transform: translateX(0);
@@ -868,11 +874,11 @@ body {
 }
 .heart-checkbox__icon:hover {
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
 }
 .heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
   opacity: 1;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 .heart-checkbox__icon-filled {
   position: absolute;
@@ -995,6 +1001,9 @@ body {
   transform: rotate(0deg);
   transition: transform 500ms ease-out 150ms;
 }
+.menu-card:hover, .restaurant-menu__dishes__item:hover {
+  cursor: pointer;
+}
 .menu-card:active .menu-card__green-tick, .restaurant-menu__dishes__item:active .menu-card__green-tick {
   transform: translateX(0);
 }
@@ -1090,11 +1099,11 @@ body {
 }
 .heart-checkbox__icon:hover {
   opacity: 0;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
 }
 .heart-checkbox__icon:hover + .heart-checkbox__icon-filled {
   opacity: 1;
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 .heart-checkbox__icon-filled {
   position: absolute;
@@ -1180,18 +1189,22 @@ body {
   border-radius: 15px;
 }
 .restaurant-menu__dishes__item {
-  animation: moveUpFadeIn 1000ms ease-out;
+  animation: moveUpFadeIn 1000ms ease-out 500ms;
+  animation-fill-mode: both;
   position: relative;
   overflow: hidden;
 }
 .restaurant-menu__dishes__item:nth-of-type(1) {
-  animation-delay: 0s;
+  animation-delay: 0ms;
 }
 .restaurant-menu__dishes__item:nth-of-type(2) {
   animation-delay: 150ms;
 }
 .restaurant-menu__dishes__item:nth-of-type(3) {
-  animation-delay: 250ms;
+  animation-delay: 300ms;
+}
+.restaurant-menu__dishes__item:nth-of-type(4) {
+  animation-delay: 450ms;
 }
 @keyframes moveUpFadeIn {
   0% {

@@ -92,11 +92,11 @@
 
         &:hover {
             opacity: 0;
-            transition: opacity 500ms;
+            transition: opacity 300ms;
 
             &+.heart-checkbox__icon-filled {
                 opacity: 1;
-                transition: opacity 500ms ease-in-out;
+                transition: opacity 300ms ease-in-out;
 
             }
         }
