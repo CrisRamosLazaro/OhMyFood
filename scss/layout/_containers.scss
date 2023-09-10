@@ -1,29 +1,36 @@
 @import '../utils/variables';
 @import '../utils/mixins';
+@import '../utils/extensions';
 @import '../components/buttons';
 @import '../components/cards';
 
 .location {
     @include flex-box;
+    gap: 15px;
     background-color: lighten-color($grey-background, 48%);
 
     &__icon {
-        padding: 4% 2%;
+        padding: 2.5vh 0.5vw;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.15);
+            transition: 0.2s;
+        }
     }
 
     &__text {
-        padding: 4% 2%;
+        padding: 2.5vh 0.5vw;
         font-weight: bold;
     }
 }
 
 .explore {
     @include flex-box ($direction: column);
-    padding: 0.5em 1em;
+    padding: 2em 3em;
     background-color: lighten-color($grey-background, 52.5%);
 
     p {
-        padding: 0 10%;
         text-align: center;
     }
 
@@ -33,11 +40,13 @@
 }
 
 .instructions {
-    @include flex-box ($direction: column);
-    padding: 0.5em 1em;
+    @include flex-box;
+    flex-wrap: wrap;
+    padding: $section-padding;
+    background-color: #fff;
 
     &__title {
-        @include left-title;
+        @extend left-title;
     }
 
     &__button {
@@ -47,15 +56,19 @@
 }
 
 .restaurants {
-    @include flex-box($direction: column);
-    padding: 0.5em 1em;
+    @include flex-box;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    padding: $section-padding;
     background-color: lighten-color($grey-background, 52.5%);
 
     &__title {
-        @include left-title;
+        @extend left-title;
     }
 
     &__card {
         @extend .resto-card;
+
     }
+
 }

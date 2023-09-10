@@ -7,17 +7,6 @@
     flex-direction: $direction;
 }
 
-@mixin hovered-button {
-    background: linear-gradient(to bottom, lighten($secondary-color, 7.5%), lighten($primary-color, 7.5%));
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-@mixin left-title {
-    @include flex-box($justify-content: flex-start);
-    width: $width;
-    margin-left: -18px;
-}
-
 @mixin restaurant-image($bg-image) {
     height: 250px;
     background-image: $bg-image;

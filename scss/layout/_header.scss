@@ -1,17 +1,17 @@
 @import '../utils/mixins';
+@import '../utils/extensions';
 @import '../utils/variables';
 
 .header {
 
     @include flex-box;
     position: relative;
-    padding: 3%;
+    padding: 1.5vh 1vw;
     box-shadow: $shadow;
 
     &__logo {
-        font-family: $title;
+        @extend title;
         font-size: 180%;
-        letter-spacing: 0.05em;
         margin: 0;
     }
 

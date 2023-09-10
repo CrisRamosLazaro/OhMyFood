@@ -1,5 +1,6 @@
-@import '../utils/mixins';
 @import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/extensions';
 @import '../components/cards';
 @import '../components/buttons';
 
@@ -38,7 +39,7 @@
         padding: 0 5%;
 
         &__name {
-            font-family: $title;
+            @extend title;
         }
 
         &__icon {
@@ -47,10 +48,14 @@
     }
 
     &__dishes {
-        padding: 0 5% 2.5%;
+        @include flex-box($justify-content: left);
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 5%;
 
         &__title {
             font-weight: 500;
+            width: 100%;
             position: relative;
             display: inline-block;
 
@@ -59,7 +64,7 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                width: 60%;
+                width: 12%;
                 height: 3px;
                 background-color: $tertiary-color;
                 transform: translateY(10px);
@@ -111,7 +116,7 @@
 
         &__button {
             @extend .page-button;
-            width: 50%;
+            width: 200px;
         }
 
 
