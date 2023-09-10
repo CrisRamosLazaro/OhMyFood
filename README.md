@@ -1,6 +1,6 @@
 # OhMyFood
 
-https://ohmyfood.netlify.app/
+https://ohmyfood-mockup.netlify.app/
 
 ## Objectives
 We would like to open our services in the French capital.
