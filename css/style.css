@@ -431,10 +431,10 @@ title, .restaurant-menu__heading__name, .header__logo {
   background-color: #fff;
 }
 .loader-screen__spinner {
+  margin: 40%;
   position: absolute;
-  margin: 47.5%;
-  width: 13px;
-  height: 13px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #9356DC;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
