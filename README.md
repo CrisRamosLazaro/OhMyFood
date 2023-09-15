@@ -1,10 +1,14 @@
 # OhMyFood
 
-https://ohmyfood.netlify.app/
+https://ohmyfood-mockup.netlify.app/
+
+https://github.com/CrisRamosLazaro/OhMyFood
 
 ## Objectives
 We would like to open our services in the French capital.
+
 ● Phase 1: Develop a site offering the menu of four great Parisian restaurants.
+
 ● Phase 2: Allow online booking and menu composition.
 
 ## Operations
