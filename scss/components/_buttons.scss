@@ -14,7 +14,7 @@
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 
     &:hover {
-        @extend hovered-button;
+        @extend .hovered-button;
     }
 
 }

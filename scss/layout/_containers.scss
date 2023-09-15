@@ -46,7 +46,7 @@
     background-color: #fff;
 
     &__title {
-        @extend left-title;
+        @extend .left-title;
     }
 
     &__button {
@@ -63,7 +63,7 @@
     background-color: lighten-color($grey-background, 52.5%);
 
     &__title {
-        @extend left-title;
+        @extend .left-title;
     }
 
     &__card {

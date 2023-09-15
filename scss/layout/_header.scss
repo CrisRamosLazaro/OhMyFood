@@ -10,7 +10,7 @@
     box-shadow: $shadow;
 
     &__logo {
-        @extend title;
+        @extend .title;
         font-size: 180%;
         margin: 0;
     }

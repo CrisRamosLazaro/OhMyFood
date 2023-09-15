@@ -39,7 +39,7 @@
         padding: 0 5%;
 
         &__name {
-            @extend title;
+            @extend .title;
         }
 
         &__icon {

@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+.hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
   background: linear-gradient(to bottom, #ff9fe5, #a776e3);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-left-title, .restaurants__title, .instructions__title {
+.left-title, .restaurants__title, .instructions__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -13,7 +13,7 @@ left-title, .restaurants__title, .instructions__title {
   width: 90%;
 }
 
-title, .restaurant-menu__heading__name, .header__logo {
+.title, .restaurant-menu__heading__name, .header__logo {
   font-family: "Shrikhand";
   font-weight: 500;
 }
@@ -23,12 +23,12 @@ body {
   margin: 0;
 }
 
-hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+.hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
   background: linear-gradient(to bottom, #ff9fe5, #a776e3);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-left-title, .restaurants__title, .instructions__title {
+.left-title, .restaurants__title, .instructions__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -36,7 +36,7 @@ left-title, .restaurants__title, .instructions__title {
   width: 90%;
 }
 
-title, .restaurant-menu__heading__name, .header__logo {
+.title, .restaurant-menu__heading__name, .header__logo {
   font-family: "Shrikhand";
   font-weight: 500;
 }
@@ -140,12 +140,12 @@ title, .restaurant-menu__heading__name, .header__logo {
   opacity: 0;
 }
 
-hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+.hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
   background: linear-gradient(to bottom, #ff9fe5, #a776e3);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-left-title, .restaurants__title, .instructions__title {
+.left-title, .restaurants__title, .instructions__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -153,7 +153,7 @@ left-title, .restaurants__title, .instructions__title {
   width: 90%;
 }
 
-title, .restaurant-menu__heading__name, .header__logo {
+.title, .restaurant-menu__heading__name, .header__logo {
   font-family: "Shrikhand";
   font-weight: 500;
 }
@@ -488,12 +488,12 @@ title, .restaurant-menu__heading__name, .header__logo {
     z-index: -1;
   }
 }
-hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+.hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
   background: linear-gradient(to bottom, #ff9fe5, #a776e3);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-left-title, .restaurants__title, .instructions__title {
+.left-title, .restaurants__title, .instructions__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -501,17 +501,17 @@ left-title, .restaurants__title, .instructions__title {
   width: 90%;
 }
 
-title, .restaurant-menu__heading__name, .header__logo {
+.title, .restaurant-menu__heading__name, .header__logo {
   font-family: "Shrikhand";
   font-weight: 500;
 }
 
-hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+.hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
   background: linear-gradient(to bottom, #ff9fe5, #a776e3);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-left-title, .restaurants__title, .instructions__title {
+.left-title, .restaurants__title, .instructions__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -519,7 +519,7 @@ left-title, .restaurants__title, .instructions__title {
   width: 90%;
 }
 
-title, .restaurant-menu__heading__name, .header__logo {
+.title, .restaurant-menu__heading__name, .header__logo {
   font-family: "Shrikhand";
   font-weight: 500;
 }
@@ -623,12 +623,12 @@ title, .restaurant-menu__heading__name, .header__logo {
   opacity: 0;
 }
 
-hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+.hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
   background: linear-gradient(to bottom, #ff9fe5, #a776e3);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-left-title, .restaurants__title, .instructions__title {
+.left-title, .restaurants__title, .instructions__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -636,7 +636,7 @@ left-title, .restaurants__title, .instructions__title {
   width: 90%;
 }
 
-title, .restaurant-menu__heading__name, .header__logo {
+.title, .restaurant-menu__heading__name, .header__logo {
   font-family: "Shrikhand";
   font-weight: 500;
 }
@@ -951,12 +951,12 @@ title, .restaurant-menu__heading__name, .header__logo {
   padding: 2em 1em 3em;
   background-color: #f6f6f6;
 }
-hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+.hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
   background: linear-gradient(to bottom, #ff9fe5, #a776e3);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-left-title, .instructions__title, .restaurants__title {
+.left-title, .instructions__title, .restaurants__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -964,7 +964,7 @@ left-title, .instructions__title, .restaurants__title {
   width: 90%;
 }
 
-title, .restaurant-menu__heading__name, .header__logo {
+.title, .restaurant-menu__heading__name, .header__logo {
   font-family: "Shrikhand";
   font-weight: 500;
 }
@@ -1035,12 +1035,12 @@ title, .restaurant-menu__heading__name, .header__logo {
   font-size: 0.85em;
 }
 
-hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+.hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
   background: linear-gradient(to bottom, #ff9fe5, #a776e3);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-left-title, .instructions__title, .restaurants__title {
+.left-title, .instructions__title, .restaurants__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1048,17 +1048,17 @@ left-title, .instructions__title, .restaurants__title {
   width: 90%;
 }
 
-title, .restaurant-menu__heading__name, .header__logo {
+.title, .restaurant-menu__heading__name, .header__logo {
   font-family: "Shrikhand";
   font-weight: 500;
 }
 
-hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+.hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
   background: linear-gradient(to bottom, #ff9fe5, #a776e3);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-left-title, .instructions__title, .restaurants__title {
+.left-title, .instructions__title, .restaurants__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1066,7 +1066,7 @@ left-title, .instructions__title, .restaurants__title {
   width: 90%;
 }
 
-title, .restaurant-menu__heading__name, .header__logo {
+.title, .restaurant-menu__heading__name, .header__logo {
   font-family: "Shrikhand";
   font-weight: 500;
 }
@@ -1330,12 +1330,12 @@ title, .restaurant-menu__heading__name, .header__logo {
     width: 60%;
   }
 }
-hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
+.hovered-button, .page-button:hover, .restaurant-menu__button-box__button:hover, .explore__button:hover {
   background: linear-gradient(to bottom, #ff9fe5, #a776e3);
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-left-title, .instructions__title, .restaurants__title {
+.left-title, .instructions__title, .restaurants__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1343,7 +1343,7 @@ left-title, .instructions__title, .restaurants__title {
   width: 90%;
 }
 
-title, .restaurant-menu__heading__name, .header__logo {
+.title, .restaurant-menu__heading__name, .header__logo {
   font-family: "Shrikhand";
   font-weight: 500;
 }
