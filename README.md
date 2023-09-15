@@ -1,6 +1,7 @@
 # OhMyFood
 
 https://ohmyfood-mockup.netlify.app/
+https://github.com/CrisRamosLazaro/OhMyFood
 
 ## Objectives
 We would like to open our services in the French capital.
